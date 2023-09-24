@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <title>lon in </title>
+    <style>
+    body{
+  background-image: url(../image/backagerawde.avif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+ }
+    </style>
+  </head>
+  <body>
+  <div class="content ms-5 pt-5  " >
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap ">
+        <from class="col-md-12  ">
+          <from class="form h-100">
+            <h3 class="fs-1 text-primary"> Create the <span class="text-info fs-1">official</span> account in <span class="text-danger fs-1"> school</span>  :</h3>
+            <form class="mb-5 " method="post" id="contactForm" name="contactForm" action="BDS.php">
+              <div class="row ">
+                <div class="col-md-4 form-group mb-5">
+                  <label for="" class="col-form-label " >Nom <span class="text-danger">*</span></label>
+                  <input autofocus type="text" class="form-control name" name="nom" id="nom" placeholder="Enter Nom" pattern="/^[a-zA-Z'-]+$/"   required>
+                  <!-- pattern="/^[a-zA-Z'-]+$/" -->
+                </div>
+                <div class="col-md-4 form-group mb-5">
+                  <label for="" class="col-form-label">Prenom <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control name " name="Prenom" id="Prenom" placeholder="Enter Prenom"  pattern="/^[a-zA-Z'-]+$/"  required>
+                  <!-- pattern="/^[a-zA-Z]+[a-zA-Z]$/ig" -->
+                </div>
+                <div class="col-md-4 form-group mb-5">
+                  <label for="" class="col-form-label">telephone <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control" name="telephone" id="telephone" placeholder="Enter nomber telephone" pattern="/(\+212|0)([ \-_/]*)(\d[ \-_/]*){9}/"   required>
+                  <!-- pattern="/(\+212|0)([ \-_/]*)(\d[ \-_/]*){9}/" -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 form-group mb-5">
+                  <label for="" class="col-form-label">Email <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" name="email" id="email"  placeholder="Email@#.ma "  pattern="/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"  required>
+                  <!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" -->
+                </div>
+                <div class="col-md-4 form-group mb-5">
+                  <label for="" class="col-form-label">password <span class="text-danger">*</span></label>
+                  <input type="password" class="form-control" name="password" id="password"  placeholder =" password*"   required>
+                  <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" -->
+                </div>
+                <div class="col-md-4 form-group mb-5">
+                  <label for="" class="col-form-label"> filière <span class="text-danger">*</span></label>
+                  <select class="form-select"  name="filiere">
+                    <option selected>le choisir</option>
+                    <option value="mobile">mobile</option>
+                    <option value="web">web</option>
+                    <option value="Securite de l'information">Securite de l'information</option>
+                    <option value="dada">dada</option>
+                  </select>
+                </div>
+                <div class="col-md-4 form-group mb-5">
+                  <label for="" class="col-form-label"> Admin <span class="text-danger">*</span></label>
+                  <select class="form-select" aria-label="Default select example" name="Admin">
+                    <option value="Admin"selected>Admin</option>
+                    <option value="user">user</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group ">
+                  <input type="submit" value="Enter" class="btn btn-primary  py-2 px-4">
+                  <span class="submitting" ></span>
+                </div>
+              </div>
+            </form>
+          </from>
+        </from>
+            
+
+          </div>
+        </div>
+       
+
+  </div>
+  
+    
+    <script>
+      function validate(){
+            var name =document.getElementById('name').value;
+            var telephone=document.getElementById('telephone').value;
+            var email=document.getElementById('email').value;
+            var password=document.getElementById('phone').value;
+            if(name==" "){
+                alert('Please enter your full name (last name__).');
+                name.focus();
+                return false;
+            }
+           var regName_1=/^[a-zA-Z]+[a-zA-Z]$/ig;
+                if(regName_1.test(name)==false){
+                    alert('Please enter your full name ( last name).');
+                    name.focus();
+                    return false;
+                }
+               
+            if(telephone == ""){
+                alert('Please enter Number (telephone)');
+                telephone.focus();
+                return false;
+            }
+            var regName_2 = /(\+212|0)([ \-_/]*)(\d[ \-_/]*){9}/ig;
+                if(regName_2.test(telephone)==false){
+                    alert('Please enter Number telephone +212:');
+                    telephone.focus();
+                    return false;
+                }
+                
+            if(email == ""){
+                alert('Please enter Number (telephone).');
+                email.focus();
+                return false;
+            }
+                var regName__ = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)(.com)*$/ig;
+                if(regName__.test(email) == false){
+                    alert('Please valid en email :');
+                    email.focus();
+                    return false;
+                }
+                if(password==" "){
+                alert('Please enter your full password.');
+                name.focus();
+                return false;
+            }
+} 
+    </script>
+
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script> -->
+
+  </body>
+</html>
